@@ -21,10 +21,10 @@ app.get('/', function(req, res) {
         url: req.url
     }
     
-    var b = url;
+    //var b = url;
     // ejs render automatically looks in the views folder
     //res.render('index');
-    res.send(b);
+    res.send(a);
 });
 
 app.listen(port, function() {
