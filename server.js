@@ -1,4 +1,5 @@
 var express = require('express');
+var url = require('url');
 var app = express();
 
 // set the port of our application
@@ -19,9 +20,11 @@ app.get('/', function(req, res) {
         method: req.method,
         url: req.url
     }
+    
+    var b = url;
     // ejs render automatically looks in the views folder
     //res.render('index');
-    res.send(a);
+    res.send(b);
 });
 
 app.listen(port, function() {
