@@ -9,7 +9,8 @@ var server = http.createServer(function(req, res){
     }
     
     var b = url.parse(req.url, true);
-    res.end(JSON.stringify(a));
+    var c = {a, b}
+    res.end(JSON.stringify(c));
 });
 
 server.listen(port);
