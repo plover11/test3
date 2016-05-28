@@ -6,7 +6,7 @@ var months = ["January", "February", "March", "April", "May", "June", "July", "A
 var server = http.createServer(function(req, res){
     if (req.method == "GET"){
         var query = req.url;
-        if (query.indexOf('\/') > 0){
+        if (query.indexOf("/") > 0){
             res.writeHead(404, { 'Content-Type': 'document' });
             res.end("Cannot GET "+query);
         }
@@ -35,7 +35,8 @@ var server = http.createServer(function(req, res){
         }
         
         res.writeHead(200, { 'Content-Type': 'document'});
-        res.end(JSON.stringify(dateobj));
+        //res.end(JSON.stringify(dateobj));
+        res.end(dateobj);
     }
 
 });
