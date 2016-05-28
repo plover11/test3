@@ -35,8 +35,8 @@ var server = http.createServer(function(req, res){
         }
         
         res.writeHead(200, { 'Content-Type': 'document'});
-        //res.end(JSON.stringify(dateobj));
-        res.end(dateobj);
+        res.end(JSON.stringify(dateobj));
+        //res.end(dateobj);
     }
 
 });
